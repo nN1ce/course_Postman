@@ -1,4 +1,4 @@
-# course_Postman
+# ***course_Postman***
 
 Postman.\
 HW_1
@@ -16,13 +16,13 @@ request url params: \
  name: str\
  age: int
 
-response: \
-[
+*response: \
+[\
     “Str”,\
-    “Str”
-]
+    “Str”\
+]*
 
-==================
+***
 
 EP_2\
 Method: POST\
@@ -32,15 +32,15 @@ request form data: \
  age: int\
  salary: int
 
-response: \
+*response: \
 {'name': name,\
           'age': age,\
           'salary': salary,\
           'family': {'children': [['Alex', 24], ['Kate', 12]],\
-                     'u_salary_1_5_year': salary * 4}
+                     'u_salary_1_5_year': salary * 4}*
 
 
-==================
+***
 
 EP_3\
 Method: GET\
@@ -50,14 +50,14 @@ request url params: \
  age: int\
  weight: int
 
-response: \
+*response: \
 {'name': name,\
           'age': age,\
           'daily_food': weight * 0.012,\
-          'daily_sleep': weight * 2.5}
+          'daily_sleep': weight * 2.5}*
 
 
-==================
+***
 
 EP_4\
 Method: GET\
@@ -67,7 +67,7 @@ request url params: \
  age: int\
  salary: int
 
-response: \
+*response: \
 {'start_qa_salary': salary,\
           'qa_salary_after_6_months': salary * 2,\
           'qa_salary_after_12_months': salary * 2.7,\
@@ -76,10 +76,10 @@ response: \
           'person': {'u_name': [user_name, salary, age],\
                      'u_age': age,\
                      'u_salary_5_years': salary * 4.2}
-          }
+          }*
 
 
-==================
+***
 
 EP_5\
 Method: GET\
@@ -89,7 +89,7 @@ request url params: \
  age: int\
  salary: int
 
-response: \
+*response: \
 {'name': name,\
           'age': age,\
           'salary': salary,\
@@ -99,10 +99,10 @@ response: \
                               'dog':{'name':'Luky',\
                                      'age': 4}},\
                      'u_salary_1_5_year': salary * 4}
-          }
+          }*
 
 
-==================
+***
 
 EP_6\
 Method: GET\
@@ -112,13 +112,13 @@ request url params: \
  age: int\
  salary: int
 
-response: \
+*response: \
 {'name': name,\
           'age': int(age),\
-          'salary': [salary, str(salary * 2), str(salary * 3)]
+          'salary': [salary, str(salary * 2), str(salary * 3)]*
 
 
-==================
+***
 
 EP_7\
 Method: POST\
@@ -128,7 +128,7 @@ request form data: \
  age: int\
  salary: int
 
-response: \
+*response: \
 {'start_qa_salary': salary,\
           'qa_salary_after_6_months': salary * 2,\
           'qa_salary_after_12_months': salary * 2.7,\
@@ -137,4 +137,4 @@ response: \
           'person': {'u_name': [user_name, salary, age],\
                      'u_age': age,\
                      'u_salary_5_years': salary * 4.2}
-          }
+          }*
