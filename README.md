@@ -1,7 +1,7 @@
 # ***course_Postman***
 
 Postman.\
-HW_1
+<details><summary>Task for the first postman homework</summary>
 
 Создать запросы в Postman.
 
@@ -138,3 +138,5 @@ request form data: \
                      'u_age': age,\
                      'u_salary_5_years': salary * 4.2}
           }*
+          
+</details>          
