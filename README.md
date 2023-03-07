@@ -19,7 +19,7 @@ request url params: \
 response: \
 [
     “Str”,\
-    “Str”\
+    “Str”
 ]
 
 ==================
@@ -37,7 +37,7 @@ response: \
           'age': age,\
           'salary': salary,\
           'family': {'children': [['Alex', 24], ['Kate', 12]],\
-                     'u_salary_1_5_year': salary * 4}}\
+                     'u_salary_1_5_year': salary * 4}
 
 
 ==================
@@ -54,7 +54,7 @@ response: \
 {'name': name,\
           'age': age,\
           'daily_food': weight * 0.012,\
-          'daily_sleep': weight * 2.5}\
+          'daily_sleep': weight * 2.5}
 
 
 ==================
@@ -75,7 +75,7 @@ response: \
           'qa_salary_after_3.5_years': salary * 3.8,\
           'person': {'u_name': [user_name, salary, age],\
                      'u_age': age,\
-                     'u_salary_5_years': salary * 4.2}\
+                     'u_salary_5_years': salary * 4.2}
           }\
 
 
@@ -98,7 +98,7 @@ response: \
                                      'age': 3},\
                               'dog':{'name':'Luky',\
                                      'age': 4}},\
-                     'u_salary_1_5_year': salary * 4}\
+                     'u_salary_1_5_year': salary * 4}
           }
 
 
@@ -115,7 +115,7 @@ request url params: \
 response: \
 {'name': name,\
           'age': int(age),\
-          'salary': [salary, str(salary * 2), str(salary * 3)]}\
+          'salary': [salary, str(salary * 2), str(salary * 3)]
 
 
 ==================
@@ -136,5 +136,5 @@ response: \
           'qa_salary_after_3.5_years': salary * 3.8,\
           'person': {'u_name': [user_name, salary, age],\
                      'u_age': age,\
-                     'u_salary_5_years': salary * 4.2}\
+                     'u_salary_5_years': salary * 4.2}
           }
