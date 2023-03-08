@@ -452,6 +452,466 @@
 					"response": []
 				}
 			]
+		},
+		{
+			"name": "Lesson_01",
+			"item": [
+				{
+					"name": "login",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"var resp_token = jsonData.token\r",
+									"\r",
+									"\r",
+									"console.log(resp_token)\r",
+									"\r",
+									"pm.environment.set(\"token\", resp_token )"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "login",
+									"value": "Evgen",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "11223344",
+									"type": "text"
+								},
+								{
+									"key": "",
+									"value": "7000",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/login",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"login"
+							],
+							"query": [
+								{
+									"key": "name ",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_info_3",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Evgen",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "7000",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/user_info_3",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_info_3"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new_data",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Evgen",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/new_data",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"new_data"
+							],
+							"query": [
+								{
+									"key": "name ",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new_data Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"var resp_age = jsonData.age;\r",
+									"\r",
+									"var req = request.data;\r",
+									"var req_age = +req.age;\r",
+									"\r",
+									"console.log(\"Resp_age = \",  resp_age )\r",
+									"console.log(\"Req_age = \",  req_age )\r",
+									"\r",
+									"\r",
+									"pm.test(\"Req_Resp_AGE_check\", function () {\r",
+									"    pm.expect(resp_age).to.eql(32)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Req_Resp_AGE_check\", function () {\r",
+									"    pm.expect(resp_age).to.eql(55)\r",
+									"})\r",
+									"\r",
+									"pm.test(\"Req_Resp_AGE_check\", function () {\r",
+									"    pm.expect(resp_age).to.eql(req_age)\r",
+									"})\r",
+									"\r",
+									"\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Evgen",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/new_data",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"new_data"
+							],
+							"query": [
+								{
+									"key": "name ",
+									"value": "",
+									"disabled": true
+								},
+								{
+									"key": "age",
+									"value": null,
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "new_data Copy 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var jsonData = pm.response.json();\r",
+									"var resp_age = jsonData.age;\r",
+									"\r",
+									"var req = request.data;\r",
+									"var req_age = +req.age;\r",
+									"var req_url = pm.request.url.query.toObject();\r",
+									"\r",
+									"\r",
+									"console.log(\"Resp_age = \",  resp_age );\r",
+									"console.log(\"Req_age = \",  req_age );\r",
+									"console.log(\"Req_url = \",  req_url.user_name)\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "name",
+									"value": "Evgen",
+									"type": "text"
+								},
+								{
+									"key": "age",
+									"value": "32",
+									"type": "text"
+								},
+								{
+									"key": "salary",
+									"value": "7000",
+									"type": "text"
+								},
+								{
+									"key": "auth_token",
+									"value": "{{token}}",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/new_data?user_name=Alex",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"new_data"
+							],
+							"query": [
+								{
+									"key": "user_name",
+									"value": "Alex"
+								},
+								{
+									"key": "age",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_info",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"// var jsonData = pm.response.json();\r",
+									"// var resp_age = jsonData.age;\r",
+									"\r",
+									"// var req = request.data;\r",
+									"// var req_age = +req.age;\r",
+									"// var req_url = pm.request.url.query.toObject();\r",
+									"\r",
+									"\r",
+									"// console.log(\"Resp_age = \",  resp_age )\r",
+									"// console.log(\"Req_age = \",  req_age )\r",
+									"// console.log(\"Req_url = \",  req_url.user_name)\r",
+									"\r",
+									"var req_raw_json = JSON.parse(pm.request.body.raw)\r",
+									"console.log(\"Req_raw_json =\", req_raw_json)\r",
+									"console.log(\"Req_raw_json =\", req_raw_json.name)\r",
+									"console.log(\"Req_raw_json =\", req_raw_json.age)\r",
+									"console.log(\"Req_raw_json =\", req_raw_json.salary)\r",
+									"\r",
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 32,\r\n    \"name\": \"Evgen\",\r\n    \"salary\": 7000,\r\n    \"auth_token\": \"{{token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user_info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_info"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_info Copy",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									"var resp_json = pm.response.json();\r",
+									"var resp_u_age = resp_json.person.u_age;\r",
+									"\r",
+									"var req_raw_json = JSON.parse(pm.request.body.raw);\r",
+									"var req_age = req_raw_json.age;\r",
+									"\r",
+									"var resp_salary = resp_json.person.u_name[1];\r",
+									"var req_salary = req_raw_json.salary;\r",
+									"\r",
+									"console.log(\"Resp_u_age = \", resp_u_age)\r",
+									"console.log(\"Req_age = \", req_age)\r",
+									"console.log(\"Resp_salary = \", resp_salary)\r",
+									"\r",
+									"pm.test(\"Req_Resp_Age_Check\", function() {\r",
+									"    pm.expect(req_age).to.eql(resp_u_age)\r",
+									"});\r",
+									"\r",
+									"pm.test(\"Req_Resp_Salary_Check\", function() {\r",
+									"    pm.expect(req_salary).to.eql(resp_salary)\r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"age\": 32,\r\n    \"name\": \"Evgen\",\r\n    \"salary\": 7000,\r\n    \"auth_token\": \"{{token}}\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{url}}/user_info",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"user_info"
+							],
+							"query": [
+								{
+									"key": "age",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
