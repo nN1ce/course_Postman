@@ -4,6 +4,8 @@ Postman.\
 <details><summary>Task for the first postman homework</summary>
 
 Создать запросы в Postman.
+Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)
+
 ```
 Protocol: http
 IP: 162.55.220.72
