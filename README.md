@@ -149,105 +149,133 @@ request form data: \
 
 http://162.55.220.72:5005/first
 1. Отправить запрос.
-2. Статус код 200\
-*pm.test("Проверка на статус-код 200", function () {\
-    pm.response.to.have.status(200);\
-});*
-3. Проверить, что в body приходит правильный string.\
-*pm.test("В body приходит правильный string", function () {\
-    pm.expect(pm.response.text()).to.include("This is the first responce from server!ss");\
-});*
+2. Статус код 200
+```
+pm.test("Проверка на статус-код 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+3. Проверить, что в body приходит правильный string.
+```
+pm.test("В body приходит правильный string", function () {
+    pm.expect(pm.response.text()).to.include("This is the first responce from server!ss");
+});
+```
 ***
 http://162.55.220.72:5005/user_info_3
 1. Отправить запрос.
-2. Статус код 200\
-*pm.test("Status code is 200", function () {\
-    pm.response.to.have.status(200);\
-});*
-3. Спарсить response body в json.\
-*var resp = pm.response.json();*
-4. Проверить, что name в ответе равно name s request (name вбить руками.)\
-*pm.test("Req_name_Resp_name_Check_Manual", function () {\
-    pm.expect(resp.name).to.eql("Evgen");\
-});*
-5. Проверить, что age в ответе равно age s request (age вбить руками.)\
-*pm.test("Resp.age = Req.age Check_Manual", function () {\
-    pm.expect(+resp.age).to.eql(32);\
-});*
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)\
-*pm.test("Resp.salary = Req.salary Check_Manual", function () {\
-    pm.expect(resp.salary).to.eql(7000);\
-});*
-7. Спарсить request.\
-*var req = request.data;*
-8. Проверить, что name в ответе равно name s request (name забрать из request.)\
-*pm.test('Req_name_Resp_name_Check_Auto', function () {\
-    pm.expect(resp.name).to.eql(req.name);\
-});*
-9. Проверить, что age в ответе равно age s request (age забрать из request.)\
-*pm.test('Req_age_Resp_age_Check_Auto', function () {\
-    pm.expect(resp.age).to.eql(req.age);\
-});*
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)\
-*pm.test("Req_salary_Resp_salary_Check_Auto", function () {\
-    pm.expect(+req.salary).to.eql(resp.salary);\
-});*
-11. Вывести в консоль параметр family из response.\
-*console.log(resp.family);*
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)\
-*pm.test("Resp_salary_Req_salary*4_Check", function () {\
-    pm.expect(resp.family.u_salary_1_5_year).to.eql(req.salary * 4);\
-});*
+2. Статус код 200
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+3. Спарсить response body в json.
+```
+var resp = pm.response.json();
+```
+4. Проверить, что name в ответе равно name s request (name вбить руками.)
+```
+pm.test("Req_name_Resp_name_Check_Manual", function () {
+    pm.expect(resp.name).to.eql("Evgen");
+});
+```
+5. Проверить, что age в ответе равно age s request (age вбить руками.)
+```
+pm.test("Resp.age = Req.age Check_Manual", function () {
+    pm.expect(+resp.age).to.eql(32);
+});
+```
+6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
+```
+pm.test("Resp.salary = Req.salary Check_Manual", function () {
+    pm.expect(resp.salary).to.eql(7000);
+});
+```
+7. Спарсить request.
+```
+var req = request.data;
+```
+8. Проверить, что name в ответе равно name s request (name забрать из request.)
+```
+pm.test('Req_name_Resp_name_Check_Auto', function () {
+    pm.expect(resp.name).to.eql(req.name);
+});
+```
+9. Проверить, что age в ответе равно age s request (age забрать из request.)
+```
+pm.test('Req_age_Resp_age_Check_Auto', function () {
+    pm.expect(resp.age).to.eql(req.age);
+});
+```
+10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+```
+pm.test("Req_salary_Resp_salary_Check_Auto", function () {
+    pm.expect(+req.salary).to.eql(resp.salary);
+});
+```
+11. Вывести в консоль параметр family из response.
+```
+console.log(resp.family);
+```
+12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+```
+pm.test("Resp_salary_Req_salary*4_Check", function () {
+    pm.expect(resp.family.u_salary_1_5_year).to.eql(req.salary * 4);
+});
+```
 ***
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
-2. Статус код 200\
-*pm.test("Status code is 200", function () {\
-    pm.response.to.have.status(200);\
-});*
-3. Спарсить response body в json.\
-*var resp = pm.response.json();*
-4. Спарсить request.\
-*var req_url = pm.request.url.query.toObject();*
-5. Проверить, что name в ответе равно name s request (name забрать из request.)\
-*pm.test("resp_name = req_name_Check_Auto", function () {\
-    pm.expect(resp.name).to.eql(req_url.name);\
-});*
-6. Проверить, что age в ответе равно age s request (age забрать из request.)\
-*pm.test("resp_age = req_age_Check_Auto", function () {\
-    pm.expect(resp.age).to.eql(req_url.age);\
-});*
-7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)\
-*pm.test("resp_salary = req_salary_Check_Auto", function () {\
-    pm.expect(resp.salary).to.eql(+req_url.salary);\
-});*
-8. Вывести в консоль параметр family из response.\
-*console.log(resp.family);*
-9. Проверить, что у параметра dog есть параметры name.\
-*pm.test("dog have name Check", function () {\
-    pm.expect(resp.family.pets.dog).to.have.property('name');\
-});*
-10. Проверить, что у параметра dog есть параметры age.\
-*pm.test("dog have age Check", function () {\
-    pm.expect(resp.family.pets.dog).to.have.property('age');\
-});*
-11. Проверить, что параметр name имеет значение Luky.\
-*pm.test("name = Luky Check", function () {\
-    pm.expect(resp.family.pets.dog.name).to.eql('Luky');\
-});*
-12. Проверить, что параметр age имеет значение 4.\
-*pm.test("age = 4 Check", function () {
+2. Статус код 200
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
+3. Спарсить response body в json.
+var resp = pm.response.json();
+4. Спарсить request.
+var req_url = pm.request.url.query.toObject();
+5. Проверить, что name в ответе равно name s request (name забрать из request.)
+pm.test("resp_name = req_name_Check_Auto", function () {
+    pm.expect(resp.name).to.eql(req_url.name);
+});
+6. Проверить, что age в ответе равно age s request (age забрать из request.)
+pm.test("resp_age = req_age_Check_Auto", function () {
+    pm.expect(resp.age).to.eql(req_url.age);
+});
+7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
+pm.test("resp_salary = req_salary_Check_Auto", function () {
+    pm.expect(resp.salary).to.eql(+req_url.salary);
+});
+8. Вывести в консоль параметр family из response.
+console.log(resp.family);
+9. Проверить, что у параметра dog есть параметры name.
+pm.test("dog have name Check", function () {
+    pm.expect(resp.family.pets.dog).to.have.property('name');
+});
+10. Проверить, что у параметра dog есть параметры age.
+pm.test("dog have age Check", function () {
+    pm.expect(resp.family.pets.dog).to.have.property('age');
+});
+11. Проверить, что параметр name имеет значение Luky.
+pm.test("name = Luky Check", function () {
+    pm.expect(resp.family.pets.dog.name).to.eql('Luky');
+});
+12. Проверить, что параметр age имеет значение 4.
+pm.test("age = 4 Check", function () {
     pm.expect(resp.family.pets.dog.age).to.eql(4);
-});*
+});
 ***
 http://162.55.220.72:5005/object_info_4
 1. Отправить запрос.
 2. Статус код 200
-'''
+```
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
 });
-'''
+```
 3. Спарсить response body в json.
 4. Спарсить request.
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
