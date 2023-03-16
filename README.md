@@ -1,9 +1,9 @@
 # ***course_Postman***
 
-Postman.\
+Postman.
 <details><summary>Первое задание по Postman</summary>
 
-Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)\
+Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)
 
 Создать запросы в Postman.
 
@@ -150,7 +150,7 @@ response:
 
 <details><summary>Второе задание по Postman</summary>
     
-Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)\
+Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)
     
 HW_2 Postman
 
