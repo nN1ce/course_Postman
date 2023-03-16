@@ -1,10 +1,11 @@
 # ***course_Postman***
 
 Postman.\
-<details><summary>Task for the first postman homework</summary>
+<details><summary>Первое задание по Postman</summary>
+
+Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)\
 
 Создать запросы в Postman.
-Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)
 
 ```
 Protocol: http
@@ -147,8 +148,11 @@ response:
 
 ***
 
-<details><summary>Task for the second postman homework</summary>
-    HW_2 Postman
+<details><summary>Второе задание по Postman</summary>
+    
+Коллекция [тут](https://github.com/nN1ce/course_Postman/blob/main/QA_Course_VadimKs_33Gr.postman_collection.json)\
+    
+HW_2 Postman
 
 
 http://162.55.220.72:5005/first
