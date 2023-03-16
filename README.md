@@ -149,13 +149,13 @@ request form data: \
 
 http://162.55.220.72:5005/first
 1. Отправить запрос.
-2. Статус код 200
-*pm.test("Проверка на статус-код 200", function () {
-    pm.response.to.have.status(200);
+2. Статус код 200\
+*pm.test("Проверка на статус-код 200", function () {\
+    pm.response.to.have.status(200);\
 });*
-3. Проверить, что в body приходит правильный string.
-*pm.test("В body приходит правильный string", function () {
-    pm.expect(pm.response.text()).to.include("This is the first responce from server!ss");
+3. Проверить, что в body приходит правильный string.\
+*pm.test("В body приходит правильный string", function () {\
+    pm.expect(pm.response.text()).to.include("This is the first responce from server!ss");\
 });*
 ***
 http://162.55.220.72:5005/user_info_3
