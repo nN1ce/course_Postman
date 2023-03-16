@@ -243,6 +243,9 @@ http://162.55.220.72:5005/object_info_3
 http://162.55.220.72:5005/object_info_4
 1. Отправить запрос.
 2. Статус код 200
+'''pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
 3. Спарсить response body в json.
 4. Спарсить request.
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
