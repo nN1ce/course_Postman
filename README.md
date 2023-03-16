@@ -4,140 +4,142 @@ Postman.\
 <details><summary>Task for the first postman homework</summary>
 
 Создать запросы в Postman.
-
-Protocol: http\
-IP: 162.55.220.72\
+```
+Protocol: http
+IP: 162.55.220.72
 Port: 5005
 
-EP_1\
-Method: GET\
-EndPoint: /get_method\
-request url params: \
- name: str\
+EP_1
+Method: GET
+EndPoint: /get_method
+request url params: 
+ name: str
  age: int
 
-*response: \
-[\
-    “Str”,\
-    “Str”\
-]*
+response: 
+[
+    “Str”,
+    “Str”
+]
 
 ***
 
-EP_2\
-Method: POST\
-EndPoint: /user_info_3\
-request form data: \
- name: str\
- age: int\
+EP_2
+Method: POST
+EndPoint: /user_info_3
+request form data: 
+ name: str
+ age: int
  salary: int
 
-*response: \
-{'name': name,\
-          'age': age,\
-          'salary': salary,\
-          'family': {'children': [['Alex', 24], ['Kate', 12]],\
-                     'u_salary_1_5_year': salary * 4}*
+response: 
+{'name': name,
+          'age': age,
+          'salary': salary,
+          'family': {'children': [['Alex', 24], ['Kate', 12]],
+                     'u_salary_1_5_year': salary * 4}
 
 
 ***
 
-EP_3\
-Method: GET\
-EndPoint: /object_info_1\
-request url params: \
- name: str\
- age: int\
+EP_3
+Method: GET
+EndPoint: /object_info_1
+request url params: 
+ name: str
+ age: int
  weight: int
 
-*response: \
-{'name': name,\
-          'age': age,\
-          'daily_food': weight * 0.012,\
-          'daily_sleep': weight * 2.5}*
+response: 
+{'name': name,
+          'age': age,
+          'daily_food': weight * 0.012,
+          'daily_sleep': weight * 2.5}
 
 
 ***
 
-EP_4\
-Method: GET\
-EndPoint: /object_info_2\
-request url params: \
- name: str\
- age: int\
+EP_4
+Method: GET
+EndPoint: /object_info_2
+request url params: 
+ name: str
+ age: int
  salary: int
 
-*response: \
-{'start_qa_salary': salary,\
-          'qa_salary_after_6_months': salary * 2,\
-          'qa_salary_after_12_months': salary * 2.7,\
-          'qa_salary_after_1.5_year': salary * 3.3,\
-          'qa_salary_after_3.5_years': salary * 3.8,\
-          'person': {'u_name': [user_name, salary, age],\
-                     'u_age': age,\
+response: 
+{'start_qa_salary': salary,
+          'qa_salary_after_6_months': salary * 2,
+          'qa_salary_after_12_months': salary * 2.7,
+          'qa_salary_after_1.5_year': salary * 3.3,
+          'qa_salary_after_3.5_years': salary * 3.8,
+          'person': {'u_name': [user_name, salary, age],
+                     'u_age': age,
                      'u_salary_5_years': salary * 4.2}
-          }*
+          }
 
 
 ***
 
-EP_5\
-Method: GET\
-EndPoint: /object_info_3\
-request url params: \
- name: str\
- age: int\
+EP_5
+Method: GET
+EndPoint: /object_info_3
+request url params: 
+ name: str
+ age: int
  salary: int
 
-*response: \
-{'name': name,\
-          'age': age,\
-          'salary': salary,\
-          'family': {'children': [['Alex', 24], ['Kate', 12]],\
-                     'pets': {'cat':{'name':'Sunny',\
-                                     'age': 3},\
-                              'dog':{'name':'Luky',\
-                                     'age': 4}},\
+response: 
+{'name': name,
+          'age': age,
+          'salary': salary,
+          'family': {'children': [['Alex', 24], ['Kate', 12]],
+                     'pets': {'cat':{'name':'Sunny',
+                                     'age': 3},
+                              'dog':{'name':'Luky',
+                                     'age': 4}},
                      'u_salary_1_5_year': salary * 4}
-          }*
+          }
 
 
 ***
 
-EP_6\
-Method: GET\
-EndPoint: /object_info_4\
-request url params: \
- name: str\
- age: int\
+EP_6
+Method: GET
+EndPoint: /object_info_4
+request url params: 
+ name: str
+ age: int
  salary: int
 
-*response: \
-{'name': name,\
-          'age': int(age),\
-          'salary': [salary, str(salary * 2), str(salary * 3)]*
+response: 
+{'name': name,
+          'age': int(age),
+          'salary': [salary, str(salary * 2), str(salary * 3)]
 
 
 ***
 
-EP_7\
-Method: POST\
-EndPoint: /user_info_2\
-request form data: \
- name: str\
- age: int\
+EP_7
+Method: POST
+EndPoint: /user_info_2
+request form data: 
+ name: str
+ age: int
  salary: int
 
-*response: \
-{'start_qa_salary': salary,\
-          'qa_salary_after_6_months': salary * 2,\
-          'qa_salary_after_12_months': salary * 2.7,\
-          'qa_salary_after_1.5_year': salary * 3.3,\
-          'qa_salary_after_3.5_years': salary * 3.8,\
-          'person': {'u_name': [user_name, salary, age],\
-                     'u_age': age,\
+response: 
+{'start_qa_salary': salary,
+          'qa_salary_after_6_months': salary * 2,
+          'qa_salary_after_12_months': salary * 2.7,
+          'qa_salary_after_1.5_year': salary * 3.3,
+          'qa_salary_after_3.5_years': salary * 3.8,
+          'person': {'u_name': [user_name, salary, age],
+                     'u_age': age,
                      'u_salary_5_years': salary * 4.2}
-          }*
+          }
+          
+```
           
 </details>      
 
@@ -391,23 +393,117 @@ http://162.55.220.72:5005/user_info_2
 3. Вставить параметр name из окружения в name
 4. Отправить запрос.
 5. Статус код 200
+```
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+```
 6. Спарсить response body в json.
+```
+var resp = pm.response.json();
+```
 7. Спарсить request.
+```
+var req = request.data;
+```
 8. Проверить, что json response имеет параметр start_qa_salary
+```
+pm.test("resp have start_qa_salary", function () {
+    pm.expect(resp).to.have.property("start_qa_salary");
+});
+```
 9. Проверить, что json response имеет параметр qa_salary_after_6_months
+```
+pm.test("resp have qa_salary_after_6_months", function () {
+    pm.expect(resp).to.have.property("qa_salary_after_6_months");
+});
+```
 10. Проверить, что json response имеет параметр qa_salary_after_12_months
+```
+pm.test("resp have qa_salary_after_12_months", function () {
+    pm.expect(resp).to.have.property("qa_salary_after_12_months");
+});
+```
 11. Проверить, что json response имеет параметр qa_salary_after_1.5_year
+```
+pm.test("resp have qa_salary_after_1.5_year", function () {
+    pm.expect(resp).to.have.property("qa_salary_after_1.5_year");
+});
+```
 12. Проверить, что json response имеет параметр qa_salary_after_3.5_years
+```
+pm.test("resp have qa_salary_after_3.5_years", function () {
+    pm.expect(resp).to.have.property("qa_salary_after_3.5_years");
+});
+```
 13. Проверить, что json response имеет параметр person
+```
+pm.test("resp have person", function () {
+    pm.expect(resp).to.have.property("person");
+});
+```
 14. Проверить, что параметр start_qa_salary равен salary из request (salary забрать из request.)
+```
+pm.test("start_qa_salary = req.salary", function () {
+    pm.expect(resp.start_qa_salary).to.eql(+req.salary);
+});
+```
 15. Проверить, что параметр qa_salary_after_6_months равен salary*2 из request (salary забрать из request.)
+```
+pm.test("resp.qa_salary_after_6 = req.salary * 2", function () {
+    pm.expect(resp.qa_salary_after_6_months).to.eql(req.salary * 2);
+});
+```
 16. Проверить, что параметр qa_salary_after_12_months равен salary*2.7 из request (salary забрать из request.)
+```
+pm.test("qa_salary_after_12_months = salary * 2.7", function () {
+    pm.expect(resp.qa_salary_after_12_months).to.eql(req.salary * 2.7);
+});
+```
 17. Проверить, что параметр qa_salary_after_1.5_year равен salary*3.3 из request (salary забрать из request.)
+```
+pm.test("qa_salary_after_1.5_year = salary * 3.3", function () {
+    pm.expect(resp['qa_salary_after_1.5_year']).to.eql(req.salary * 3.3);
+});
+```
 18. Проверить, что параметр qa_salary_after_3.5_years равен salary*3.8 из request (salary забрать из request.)
+```
+pm.test("qa_salary_after_3.5_years = salary * 3.8", function () {
+    pm.expect(resp['qa_salary_after_3.5_years']).to.eql(req.salary * 3.8);
+});
+
+```
 19. Проверить, что в параметре person, 1-й элемент из u_name равен salary из request (salary забрать из request.)
+```
+pm.test("resp.person.u_name[1] = req.salary", function () {
+    pm.expect(resp.person.u_name[1]).to.eql(+req.salary);
+});
+```
 20. Проверить, что что параметр u_age равен age из request (age забрать из request.)
+```
+pm.test("resp.person.u_age = req.age", function () {
+    pm.expect(resp.person.u_age).to.eql(+req.age);
+});
+```
 21. Проверить, что параметр u_salary_5_years равен salary*4.2 из request (salary забрать из request.)
+```
+pm.test("resp.person.u_salary_5_years = req.salary * 4.2", function () {
+    pm.expect(resp.person.u_salary_5_years).to.eql(req.salary * 4.2);
+});
+```
 22. ***Написать цикл который выведет в консоль по порядку элементы списка из параметра person.
+```
+for(var key in resp.person) {
+   if(typeof(resp.person[key]) == 'object'){
+       for(let i = 0; i <= Object.keys(resp.person[key]).length; i++){
+           console.log(resp.person[key][i]);
+       }
+   }
+   else if(typeof(resp.person[key]) != 'object') {
+        console.log(resp.person[key]);
+   }
+}
+```
 
 02.01.2023
 Postman_tests
