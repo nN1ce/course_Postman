@@ -234,43 +234,50 @@ pm.test("Status code is 200", function () {
 });
 ```
 3. Спарсить response body в json.
-`var resp = pm.response.json();`
+```var resp = pm.response.json();```
 4. Спарсить request.
-`var req_url = pm.request.url.query.toObject();`
+```var req_url = pm.request.url.query.toObject();```
 5. Проверить, что name в ответе равно name s request (name забрать из request.)
-`pm.test("resp_name = req_name_Check_Auto", function () {
+```pm.test("resp_name = req_name_Check_Auto", function () {
     pm.expect(resp.name).to.eql(req_url.name);
-});`
+});
+```
 6. Проверить, что age в ответе равно age s request (age забрать из request.)
-`pm.test("resp_age = req_age_Check_Auto", function () {
+```pm.test("resp_age = req_age_Check_Auto", function () {
     pm.expect(resp.age).to.eql(req_url.age);
-});`
+});
+```
 7. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-`pm.test("resp_salary = req_salary_Check_Auto", function () {
+```pm.test("resp_salary = req_salary_Check_Auto", function () {
     pm.expect(resp.salary).to.eql(+req_url.salary);
-});`
+});
+```
 8. Вывести в консоль параметр family из response.
-`console.log(resp.family);`
+```console.log(resp.family);```
 9. Проверить, что у параметра dog есть параметры name.
-`pm.test("dog have name Check", function () {
+```pm.test("dog have name Check", function () {
     pm.expect(resp.family.pets.dog).to.have.property('name');
-});`
+});
+```
 10. Проверить, что у параметра dog есть параметры age.
-`pm.test("dog have age Check", function () {
+```pm.test("dog have age Check", function () {
     pm.expect(resp.family.pets.dog).to.have.property('age');
-});`
+});
+```
 11. Проверить, что параметр name имеет значение Luky.
-`pm.test("name = Luky Check", function () {
+```pm.test("name = Luky Check", function () {
     pm.expect(resp.family.pets.dog.name).to.eql('Luky');
-});`
+});
+```
 12. Проверить, что параметр age имеет значение 4.
-`pm.test("age = 4 Check", function () {
+```pm.test("age = 4 Check", function () {
     pm.expect(resp.family.pets.dog.age).to.eql(4);
-});`
+});
+```
 ***
 http://162.55.220.72:5005/object_info_4
 1. Отправить запрос.
-2. Статус код 200
+2. Статус код 200.
 ```
 pm.test("Status code is 200", function () {
     pm.response.to.have.status(200);
