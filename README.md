@@ -160,17 +160,44 @@ http://162.55.220.72:5005/first
 ***
 http://162.55.220.72:5005/user_info_3
 1. Отправить запрос.
-2. Статус код 200
+2. Статус код 200\
+*pm.test("Status code is 200", function () {\
+    pm.response.to.have.status(200);\
+});*
 3. Спарсить response body в json.
-4. Проверить, что name в ответе равно name s request (name вбить руками.)
-5. Проверить, что age в ответе равно age s request (age вбить руками.)
-6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)
-7. Спарсить request.
-8. Проверить, что name в ответе равно name s request (name забрать из request.)
-9. Проверить, что age в ответе равно age s request (age забрать из request.)
-10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)
-11. Вывести в консоль параметр family из response.
-12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)
+*var resp = pm.response.json();*
+4. Проверить, что name в ответе равно name s request (name вбить руками.)\
+*pm.test("Req_name_Resp_name_Check_Manual", function () {\
+    pm.expect(resp.name).to.eql("Evgen");\
+});*
+5. Проверить, что age в ответе равно age s request (age вбить руками.)\
+*pm.test("Resp.age = Req.age Check_Manual", function () {\
+    pm.expect(+resp.age).to.eql(32);\
+});*
+6. Проверить, что salary в ответе равно salary s request (salary вбить руками.)\
+*pm.test("Resp.salary = Req.salary Check_Manual", function () {\
+    pm.expect(resp.salary).to.eql(7000);\
+});*
+7. Спарсить request.\
+*var req = request.data;*
+8. Проверить, что name в ответе равно name s request (name забрать из request.)\
+*pm.test('Req_name_Resp_name_Check_Auto', function () {\
+    pm.expect(resp.name).to.eql(req.name);\
+});*
+9. Проверить, что age в ответе равно age s request (age забрать из request.)\
+*pm.test('Req_age_Resp_age_Check_Auto', function () {\
+    pm.expect(resp.age).to.eql(req.age);\
+});*
+10. Проверить, что salary в ответе равно salary s request (salary забрать из request.)\
+*pm.test("Req_salary_Resp_salary_Check_Auto", function () {\
+    pm.expect(+req.salary).to.eql(resp.salary);\
+});*
+11. Вывести в консоль параметр family из response.\
+*console.log(resp.family);*
+12. Проверить что u_salary_1_5_year в ответе равно salary*4 (salary забрать из request)\
+*pm.test("Resp_salary_Req_salary*4_Check", function () {\
+    pm.expect(resp.family.u_salary_1_5_year).to.eql(req.salary * 4);\
+});*
 ***
 http://162.55.220.72:5005/object_info_3
 1. Отправить запрос.
